@@ -5,9 +5,16 @@ import java.util.Arrays;
 public class BagImpl implements Bag{
     private Object [] data;
     private int size;
+    private int capacity;
 
     public BagImpl() {
-        this.data = new Object[10];
+        this(10);
+
+    }
+
+    public BagImpl(int capacity) {
+        this.capacity = capacity;
+        this.data = new Object[capacity];
     }
 
     @Override
