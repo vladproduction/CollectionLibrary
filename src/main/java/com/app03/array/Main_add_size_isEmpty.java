@@ -1,4 +1,4 @@
-package com.app03;
+package com.app03.array;
     /*
 * working with methods:
 *   isEmpty();
@@ -10,6 +10,8 @@ package com.app03;
 *   -capacity out of bounds, so if bench settings start
 *
 * modify toString, so it dsn`t print "null"   */
+
+import com.app03.MyList;
 
 public class Main_add_size_isEmpty {
     public static void main(String[] args) {

@@ -1,4 +1,6 @@
-package com.app03;
+package com.app03.array;
+
+import com.app03.MyList;
 
 /*
 * working with methods:
