@@ -52,16 +52,36 @@ public class MyLinkedList implements MyList {
 
     @Override
     public Object set(int index, Object newObject) {
-        return null;
+        int step = 0;
+        Node tmp = root;
+        while (tmp.getNext()!=null){
+            if (step==index){
+                break;
+            }
+            tmp = tmp.getNext();
+            step++;
+        }
+        Object currentValue = tmp.getValue();
+        tmp.setValue(newObject);
+        return currentValue;
     }
 
     @Override
     public void clear() {
-
+        root = null;
+        size=0;
     }
 
     @Override
     public void remove(int index) {
+        int step = 0;
+        Node tmp = root;
+        while (tmp.getNext()!=null){
+            if(step==index){
+                break;
+            }
+            tmp = tmp.getNext();
+        }
 
     }
 }
