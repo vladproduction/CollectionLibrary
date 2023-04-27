@@ -1,7 +1,7 @@
 package App02_ArrayList;
 
-import com.MyList;
-import com.app02_ArrayList.MyListImpl;
+import com.MyCollections.MyList;
+import com.MyCollections.app02_ArrayList.MyListImpl;
 import org.junit.Assert;
 import org.junit.Test;
 

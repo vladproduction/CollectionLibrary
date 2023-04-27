@@ -1,7 +1,7 @@
 package App01_Array;
 
-import com.Bag;
-import com.app01_Array.BagImpl;
+import com.MyCollections.Bag;
+import com.MyCollections.app01_Array.BagImpl;
 import org.junit.Assert;
 import org.junit.Test;
 

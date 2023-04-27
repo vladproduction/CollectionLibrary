@@ -1,0 +1,17 @@
+Iterable-->
+    Collection-->
+        -Queue
+        -Set
+        -Collections.List-->
+            -ArrayList
+            -LinkedList
+
+•add ()•addAll ()•remove()•removeAll ()•retainAll ()•size()
+•clear ()•contains()•containsAll ()•iterator ()
+
+
+
+
+
+
+
