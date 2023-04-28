@@ -1,0 +1,41 @@
+package App04_Stack;
+
+import com.MyCollections.app04_Stack.MyStack;
+import com.MyCollections.app04_Stack.MyStackImpl02;
+import org.junit.Assert;
+import org.junit.Test;
+
+public class MyStackImpl01Test {
+
+    @Test
+    public void apiTest(){
+        //01 []
+        //02 LinkedList
+        //if we change 01-->02: now is_a LinkedList
+        MyStack myStack = new MyStackImpl02();
+        Assert.assertTrue(myStack.isEmpty());
+        Assert.assertTrue(myStack.size()==0);
+        myStack.push("a");
+        myStack.push("b");
+        myStack.push("c");
+        myStack.push("d");
+        Assert.assertFalse(myStack.isEmpty());
+        Assert.assertTrue(myStack.size()==4);
+        Object topItem = myStack.peek();
+        Assert.assertTrue(myStack.size()==4);
+        Assert.assertEquals(topItem,"d");
+        //для убеждения когда вызываем метод пик, он не удаляется и правильно возвращает его значение
+        topItem = myStack.peek();
+        Assert.assertTrue(myStack.size()==4);
+        Assert.assertEquals(topItem,"d");
+
+        //pop
+        topItem = myStack.pop();
+        Assert.assertTrue(myStack.size()==3);
+        Assert.assertEquals(topItem,"d");
+        //check if everything ok work
+        topItem = myStack.peek();
+        Assert.assertTrue(myStack.size()==3);
+        Assert.assertEquals(topItem,"c");
+    }
+}
