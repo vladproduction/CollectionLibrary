@@ -76,6 +76,8 @@ public class MyLinkedListImplTest {
         Assert.assertTrue(list1.equals(list2));
         Assert.assertTrue(list2.equals(list1));
         Assert.assertEquals(list1,list2);//тоже самое что и предыдущий
+        //Assert.assertSame(list1,list2); //here == //error
+        //Assert.assertTrue(list1==list2);//same as: Assert.assertSame(list1,list2); //here ==
 
 
             //what if we change inside elements
