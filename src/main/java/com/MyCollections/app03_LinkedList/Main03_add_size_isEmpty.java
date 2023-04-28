@@ -1,7 +1,5 @@
 package com.MyCollections.app03_LinkedList;
 
-import com.MyCollections.MyList;
-
 public class Main03_add_size_isEmpty {
     public static void main(String[] args) {
         MyList linkedList = new MyLinkedListImpl();

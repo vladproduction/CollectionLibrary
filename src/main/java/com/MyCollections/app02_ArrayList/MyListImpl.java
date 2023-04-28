@@ -1,7 +1,5 @@
 package com.MyCollections.app02_ArrayList;
 
-import com.MyCollections.MyList;
-
 import java.util.Arrays;
 
 public class MyListImpl implements MyList {

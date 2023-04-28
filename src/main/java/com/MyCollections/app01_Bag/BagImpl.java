@@ -1,6 +1,4 @@
-package com.MyCollections.app01_Array;
-
-import com.MyCollections.Bag;
+package com.MyCollections.app01_Bag;
 
 import java.util.Arrays;
 

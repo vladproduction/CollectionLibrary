@@ -1,7 +1,5 @@
 package com.MyCollections.app03_LinkedList;
 
-import com.MyCollections.MyList;
-
 public class Main03_get_set_toString {
     public static void main(String[] args) {
         MyList list = new MyLinkedListImpl();

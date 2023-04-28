@@ -1,6 +1,6 @@
 package App03_LinkedList;
 
-import com.MyCollections.MyList;
+import com.MyCollections.app03_LinkedList.MyList;
 import com.MyCollections.app03_LinkedList.MyLinkedListImpl;
 import org.junit.Assert;
 import org.junit.Test;

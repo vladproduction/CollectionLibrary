@@ -11,7 +11,7 @@ package com.MyCollections.app02_ArrayList;
 *
 * modify toString, so it dsn`t print "null"   */
 
-import com.MyCollections.MyList;
+
 
 public class Main02_add_size_isEmpty {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.MyCollections;
+package com.MyCollections.app03_LinkedList;
 
 public interface MyList {
     public boolean isEmpty();

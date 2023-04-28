@@ -1,8 +1,5 @@
 package com.MyCollections.app03_LinkedList;
 
-import com.MyCollections.MyList;
-
-
 
 public class MyLinkedListImpl implements MyList {
     private int size;

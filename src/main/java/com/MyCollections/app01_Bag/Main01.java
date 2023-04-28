@@ -1,6 +1,4 @@
-package com.MyCollections.app01_Array;
-
-import com.MyCollections.Bag;
+package com.MyCollections.app01_Bag;
 
 public class Main01 {
     public static void main(String[] args) {

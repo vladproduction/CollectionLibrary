@@ -1,7 +1,5 @@
 package com.MyCollections.app03_LinkedList;
 
-import com.MyCollections.MyList;
-
 public class Main03_hashCode_equals {
     public static void main(String[] args) {
         MyList list = new MyLinkedListImpl();

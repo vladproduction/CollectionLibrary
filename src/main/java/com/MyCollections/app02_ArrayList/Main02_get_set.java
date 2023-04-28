@@ -1,6 +1,5 @@
 package com.MyCollections.app02_ArrayList;
 
-import com.MyCollections.MyList;
 
 /*
 * working with methods:

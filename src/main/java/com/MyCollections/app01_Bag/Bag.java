@@ -1,4 +1,4 @@
-package com.MyCollections;
+package com.MyCollections.app01_Bag;
 
 public interface Bag {
     public boolean isEmpty();
