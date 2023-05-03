@@ -2,7 +2,7 @@ package com.MyCollections.app04_Stack;
 
 import java.util.LinkedList;
 
-public class MyStackImpl02 implements MyStack{
+public class MyStackImpl02_LinkedList implements MyStack{
     private LinkedList data = new LinkedList();
     @Override
     public boolean isEmpty() {

@@ -8,11 +8,11 @@ import org.junit.Test;
 public class MyQueueImplTest {
 
     @Test
-    public void apiTest(){
+    public void apiTest() {
         MyQueue queue = new MyQueueImpl();
         //isEmpty, size
         Assert.assertTrue(queue.isEmpty());
-        Assert.assertTrue(queue.size()==0);
+        Assert.assertTrue(queue.size() == 0);
 
         //enQueue(Object o), toString()
         queue.enQueue("a");
@@ -34,20 +34,20 @@ public class MyQueueImplTest {
         queue1.enQueue("e");
         queue1.enQueue("f");
         queue1.enQueue("g");
-        Assert.assertTrue(queue1.size()==7);
-        Assert.assertFalse(queue1.size()==5);
-        System.out.println("queue1: "+queue1);
+        Assert.assertTrue(queue1.size() == 7);
+        Assert.assertFalse(queue1.size() == 5);
+        System.out.println("queue1: " + queue1);
 
         //deQueue
         queue1.deQueue();
-        Assert.assertTrue(queue1.size()==6);
-        Assert.assertFalse(queue1.size()==7);
-        System.out.println("queue1 (deQueue): "+queue1);
+        Assert.assertTrue(queue1.size() == 6);
+        Assert.assertFalse(queue1.size() == 7);
+        System.out.println("queue1 (deQueue): " + queue1);
 
     }
 
     @Test
-    public void hashCode_equalsTest(){
+    public void hashCode_equalsTest() {
         MyQueue queue1 = new MyQueueImpl();
         queue1.enQueue("a");
         queue1.enQueue("b");
@@ -64,10 +64,10 @@ public class MyQueueImplTest {
         queue.enQueue("e");
 
 
-        Assert.assertTrue(queue.hashCode()==queue1.hashCode());
+        Assert.assertTrue(queue.hashCode() == queue1.hashCode());
 
-        Assert.assertEquals(queue1,queue);
-        Assert.assertEquals(queue,queue1);
+        Assert.assertEquals(queue1, queue);
+        Assert.assertEquals(queue, queue1);
         Assert.assertTrue(queue.equals(queue1));
         Assert.assertTrue(queue1.equals(queue));
 
@@ -80,7 +80,7 @@ public class MyQueueImplTest {
         queue2.enQueue("d");
         queue2.enQueue("e");
 
-        Assert.assertFalse(queue.hashCode()==queue2.hashCode());
+        Assert.assertFalse(queue.hashCode() == queue2.hashCode());
         Assert.assertFalse(queue.equals(queue2));
 
 

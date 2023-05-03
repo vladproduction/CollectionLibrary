@@ -1,7 +1,7 @@
 package App04_Stack;
 
 import com.MyCollections.app04_Stack.MyStack;
-import com.MyCollections.app04_Stack.MyStackImpl02;
+import com.MyCollections.app04_Stack.MyStackImpl02_LinkedList;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -12,7 +12,7 @@ public class MyStackImpl01Test {
         //01 []
         //02 LinkedList
         //if we change 01-->02: now is_a LinkedList
-        MyStack myStack = new MyStackImpl02();
+        MyStack myStack = new MyStackImpl02_LinkedList();
         Assert.assertTrue(myStack.isEmpty());
         Assert.assertTrue(myStack.size()==0);
         myStack.push("a");
