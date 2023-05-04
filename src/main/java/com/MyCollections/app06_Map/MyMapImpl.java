@@ -74,12 +74,44 @@ public class MyMapImpl implements MyMap{
                 '}';
     }
 
-    @Override
-    public boolean equals(Object o) {
+
+    public boolean equalsDefault(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         MyMapImpl myMap = (MyMapImpl) o;
         return Objects.equals(keys, myMap.keys) && Objects.equals(values, myMap.values);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o){
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()){
+            return false;
+        }
+        if (o.getClass() == this.getClass()) {
+            MyMapImpl otherMap = (MyMapImpl) o;
+            if (keys.size() != otherMap.keys.size()
+                    && values.size() != otherMap.values.size()) {
+                return false;
+            }
+            for (int i = 0; i < keys.size(); i++) {
+                Object keysValue = keys.get(i);
+                Object otherKeyValue = otherMap.keys.get(i);
+                if (!keysValue.equals(otherKeyValue)){
+                    return false;
+                }
+            }
+            for (int i = 0; i < values.size(); i++) {
+                Object valuesValue = values.get(i);
+                Object otherValue = otherMap.values.get(i);
+                if(!valuesValue.equals(otherValue)){
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
     @Override

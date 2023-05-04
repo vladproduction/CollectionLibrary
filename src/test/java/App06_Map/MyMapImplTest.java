@@ -72,7 +72,13 @@ public class MyMapImplTest {
 
         //hashCode == ; equals.
         Assert.assertFalse(map == map1);
-        Assert.assertFalse(map.hashCode() == map1.hashCode());
+        Assert.assertTrue(map.hashCode() == map1.hashCode());
+
+        Assert.assertEquals(map,map1);
+        Assert.assertTrue(map.equals(map1));
+        Assert.assertTrue(map1.equals(map));
+
+
 
     }
 }
