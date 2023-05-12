@@ -1,4 +1,4 @@
-package com.MyCollections.app07_Generic.ch01;
+package com.MyCollections.app07_Generic.ch01_extends;
 
 import com.MyCollections.app07_Generic.MyListGeneric;
 import com.MyCollections.app07_Generic.MyListGenericImpl;

@@ -1,4 +1,4 @@
-package com.MyCollections.app07_Generic.ch02;
+package com.MyCollections.app07_Generic.ch02_produser_consumer;
 
 import java.util.ArrayList;
 import java.util.List;
