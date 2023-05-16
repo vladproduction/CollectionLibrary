@@ -1,4 +1,4 @@
-package com.MyCollections.app08_Iterator;
+package com.MyCollections.app08_Iterator.myPractice.implement;
 
 import java.util.ArrayList;
 import java.util.Iterator;
