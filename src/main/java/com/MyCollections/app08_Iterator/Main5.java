@@ -15,6 +15,7 @@ public class Main5 {
 
         Iterator<String> stringIterator = list.iterator();
         while (stringIterator.hasNext()){
+            //stringIterator.remove();
             //IllegalStateException -->> stringIterator.remove();
             //remove удаляет возвращаемый элемент;
             String value = stringIterator.next();
@@ -34,5 +35,5 @@ public class Main5 {
 * -boolean hasNext(); возвращает true если есть в коллекции следующий элемент;
 * -<example String> next(); уже идет к следующему
 * -remove(); возвращает Обьект <> ; удаляет последний элемент который нам вернул
-*    метод некст; для того чтобы удалить-сначала нужно получить элемент
-*    с помощью метода некст, вызов ремув без вызова некст, даст рантайм*/
+*    метод next; для того чтобы удалить-сначала нужно получить элемент
+*    с помощью метода next, вызов remove без вызова next, даст RuntimeException*/
