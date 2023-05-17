@@ -1,10 +1,10 @@
-package com.MyCollections.app08_Iterator.myPractice.implement;
+package com.MyCollections.app08_Iterator.Implementation.implement;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class Main3 {
+public class Main2 {
     public static void main(String[] args) {
         List<String> list = new ArrayList<>();
         list.add("a");
@@ -17,14 +17,15 @@ public class Main3 {
         while (stringIterator.hasNext()){
             String value = stringIterator.next();
             System.out.println(value);
-            if("c".equals(value)){
-                stringIterator.remove();
-            }
-
         }
         System.out.println("-------------------------------");
-        System.out.println(list);
 
+        for (String item: list) {
+            System.out.println(item);
+            if("c".equals(item)){
+                list.remove("c");
+            }
+        }
     }
 }
 

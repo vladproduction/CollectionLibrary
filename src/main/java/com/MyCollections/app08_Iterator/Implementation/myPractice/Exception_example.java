@@ -1,10 +1,10 @@
-package com.MyCollections.app08_Iterator.myPractice;
+package com.MyCollections.app08_Iterator.Implementation.myPractice;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class Iterator_example {
+public class Exception_example {
     public static void main(String[] args) {
         List<String> stringList = new ArrayList<>();
         stringList.add("A");
@@ -15,8 +15,12 @@ public class Iterator_example {
 
         System.out.println(stringList);
         System.out.println("------------------");
+        System.out.println("ConcurrentModificationException");
         for (String item: stringList){
             System.out.println(item);
+            if("A".equals(item)){
+                stringList.remove("A");
+            }
         }
         System.out.println("------------------");
         Iterator<String> iteratorList = stringList.iterator();
