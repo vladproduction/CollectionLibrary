@@ -14,6 +14,15 @@ public class MyIterator_2<T> implements Iterator<T>{
         this.size = myListIterator.size();
     }
 
+//    public MyIterator_2() {
+//
+//    }
+//
+//    public void setMyListIterator(MyListIteratorImpl_2 m){
+//        myListIterator=m;
+//
+//    }
+
     @Override
     public boolean hasNext() {
         if(iteratorStep<size){

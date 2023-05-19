@@ -1,19 +1,22 @@
-package com.MyCollections.app08_Iterator.My_Iterator_2;
+package com.MyCollections.app08_Iterator.My_Iterator3;
 
+import com.MyCollections.app08_Iterator.My_Iterator.MyIterator;
 import com.MyCollections.app08_Iterator.My_Iterator.MyListIterator;
 
 import java.util.Arrays;
+import java.util.ConcurrentModificationException;
 import java.util.Iterator;
 
-public class MyListIteratorImpl_2<T> implements MyListIterator_2<T>, Iterable<T> {
+public class MyListIteratorImpl3<T> implements MyListIterator3<T> {
     private int capacity;
     private int size;
     private T[] data;
+    private long version;
 
-    public MyListIteratorImpl_2() {
+    public MyListIteratorImpl3() {
         this(5);
     }
-    public MyListIteratorImpl_2(int capacity) {
+    public MyListIteratorImpl3(int capacity) {
         this.data = (T[])new Object[capacity];
         this.capacity = capacity;
     }
@@ -34,6 +37,7 @@ public class MyListIteratorImpl_2<T> implements MyListIterator_2<T>, Iterable<T>
         }
         data[size]=o;
         size++;
+        version++;
     }
     @Override
     public T get(int index) {
@@ -51,6 +55,7 @@ public class MyListIteratorImpl_2<T> implements MyListIterator_2<T>, Iterable<T>
             data[i] = null;
         }
         size=0;
+        version++;
     }
     @Override
     public void remove(int index) {
@@ -60,6 +65,7 @@ public class MyListIteratorImpl_2<T> implements MyListIterator_2<T>, Iterable<T>
         }
         data[size-1] = null;
         size--;
+        version++;
     }
     @Override
     public String toString() {
@@ -76,11 +82,26 @@ public class MyListIteratorImpl_2<T> implements MyListIterator_2<T>, Iterable<T>
 
     @Override
     public Iterator<T> iterator() {
-        return new MyIterator_2<>(this);
-//        MyIterator_2 myIterator2 = new MyIterator_2();
-//        //MyListIteratorImpl_2 m = this;
-//        myIterator2.setMyListIterator(this);
-//        return myIterator2;
+        return new Iterator<T>() {
+            private int iteratorStep;
+            private long iteratorVersion = version;
+            private int iteratorSize = size;
+            @Override
+            public boolean hasNext() {
+                return iteratorStep<iteratorSize;
+            }
+
+            @Override
+            public T next() {
+                if (iteratorVersion!=version){
+                    throw new ConcurrentModificationException("versions are not same; " +
+                            "iteratorVersion= "+iteratorVersion+" ;version= "+version);
+                }
+                T item = get(iteratorStep);
+                iteratorStep++;
+                return item;
+            }
+        };
     }
 
     @Override
@@ -91,8 +112,8 @@ public class MyListIteratorImpl_2<T> implements MyListIterator_2<T>, Iterable<T>
         if(o==this){
             return true;
         }
-        if (o.getClass()== MyListIteratorImpl_2.class){
-            MyListIteratorImpl_2 otherList = (MyListIteratorImpl_2)o;
+        if (o.getClass()== MyListIteratorImpl3.class){
+            MyListIteratorImpl3 otherList = (MyListIteratorImpl3)o;
             Object [] otherData = otherList.data;
             return Arrays.equals(data,otherData);
         }
