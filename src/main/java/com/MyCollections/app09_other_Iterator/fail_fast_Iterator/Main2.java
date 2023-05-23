@@ -24,13 +24,13 @@ public class Main2 {
         }
         System.out.println(listString); //now we se: deleted "c"
 
-//        System.out.println("-------------------");
-//        for (String item: listString) {
-//            if("c".equals(item)){
-//                listString.remove(2); //it`s ConcurrentModificationException
-//                //versions are not same; iteratorVersion= 4 ;version=5
-//                System.out.println(item);
-//            }
-//        }
+        System.out.println("-------------------");
+        for (String item: listString) {
+            if("c".equals(item)){
+                listString.remove(item); //it`s ConcurrentModificationException
+                //versions are not same; iteratorVersion= 4 ;version=5
+                System.out.println(item);
+            }
+        }
     }
 }
