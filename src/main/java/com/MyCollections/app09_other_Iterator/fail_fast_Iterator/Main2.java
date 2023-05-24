@@ -12,18 +12,21 @@ public class Main2 {
         listString.add("b");
         listString.add("c");
         listString.add("d");
+        listString.add("e");
 
-        System.out.println("ListIterator<String>: ");
+
+
+        System.out.println("Iterator<String>: ");
         Iterator<String> listIterator = listString.iterator();
         while (listIterator.hasNext()){
             String item = listIterator.next();
-            if ("c".equals(item)){
-                listString.remove("c");
+            if ("b".equals(item)){
+                listString.remove(2);
             }
             System.out.println(item);
-        }
-        System.out.println(listString); //now we se: deleted "c"
 
+        }
+        System.out.println(listString);
         System.out.println("-------------------");
         for (String item: listString) {
             if("c".equals(item)){
@@ -32,5 +35,6 @@ public class Main2 {
                 System.out.println(item);
             }
         }
+        System.out.println(listString);
     }
 }

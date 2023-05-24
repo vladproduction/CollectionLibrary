@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class Fail_Fast_example {
+public class Fail_Fast_example_remove_in_for_each {
     public static void main(String[] args) {
         List<String> list = new ArrayList<>();
         list.add("a");
