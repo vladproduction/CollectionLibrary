@@ -19,7 +19,7 @@ public class Main3 {
 //            }
 //        }
 //        System.out.println(listString);
-        //Iterator:
+//        Iterator:
         Iterator<String> listIterator = listString.iterator();
         while (listIterator.hasNext()){
             String value = listIterator.next();
